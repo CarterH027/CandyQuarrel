@@ -50,5 +50,9 @@ public class Player {
 
     public void addItem(Item item){inventory.add(item);}
 
+    public void setHealth(int health){this.health = health;}
+
+
+    public int getHealth(){return health;}
     public ArrayList<Item> getInventory(){return inventory;}
 }
