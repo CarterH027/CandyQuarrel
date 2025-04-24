@@ -61,8 +61,8 @@ public class Player {
 
     public void addItem(Item item){inventory.add(item);}
 
-    public void setHealth(int health){this.health = health;}
 
+    public void setHealth(int health){this.health = health;}
 
     public int getDefense(){return defense;}
     public int getHealth(){return health;}
