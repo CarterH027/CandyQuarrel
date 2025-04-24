@@ -6,7 +6,7 @@ public class Player {
     private ArrayList<Item> inventory = new ArrayList<>();
     private int maxHealth;
     private int health;
-    private int damage;
+    private int defense;
     private Weapon currentWeapon;
     private Armor currentArmor;
     private String name;
@@ -18,6 +18,7 @@ public class Player {
 
     public Player(String name){
         this.maxHealth = 30;
+        this.defense = 0;
         this.health = maxHealth;
         inventory.add(fists);
         this.name = name;
@@ -31,7 +32,16 @@ public class Player {
     private void updateHealth(){
         this.maxHealth = 30;
         this.maxHealth += currentArmor.getHealth();
+        this.health += currentArmor.getHealth();
     }
+
+    /** another internal method that is used to update the players defense
+     *
+     */
+    private void updateDefense(){
+        this.defense = currentArmor.getDefense();
+    }
+
 
     public void equip(IEquippable item){
         if(item instanceof Weapon){
@@ -39,6 +49,7 @@ public class Player {
         } else if (item instanceof Armor) {
             this.currentArmor = (Armor) item;
             this.updateHealth();
+            this.updateDefense();
         }
     }
 
@@ -53,6 +64,7 @@ public class Player {
     public void setHealth(int health){this.health = health;}
 
 
+    public int getDefense(){return defense;}
     public int getHealth(){return health;}
     public ArrayList<Item> getInventory(){return inventory;}
 }

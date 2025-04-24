@@ -13,8 +13,14 @@ public class Enemy {
         this.damage = damage;
     }
 
+    public Enemy(String name, int health, int damage){
+        this.name = name;
+        this.health = health;
+        this.damage = damage;
+    }
+
     public void attack(Player player){
-        player.setHealth(player.getHealth() - this.damage);
+        player.setHealth(player.getHealth() - (player.getDefense() - this.damage));
     }
 
     public int getHealth(){
