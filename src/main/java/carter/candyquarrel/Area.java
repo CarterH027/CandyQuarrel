@@ -29,7 +29,7 @@ public class Area {
         this.itemExists = false;
     }
     public void enemyDefeated(){
-
+        this.enemyExists = false;
     }
     public void setConnectedArea(Area area) {
         connectedAreas.add(area);
