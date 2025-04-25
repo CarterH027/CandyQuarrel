@@ -67,4 +67,9 @@ public class Player {
     public int getDefense(){return defense;}
     public int getHealth(){return health;}
     public ArrayList<Item> getInventory(){return inventory;}
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }

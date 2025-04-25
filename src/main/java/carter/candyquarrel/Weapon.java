@@ -10,4 +10,9 @@ public class Weapon extends Item implements IEquippable{
     }
 
     public int getDamage(){return damage;}
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }

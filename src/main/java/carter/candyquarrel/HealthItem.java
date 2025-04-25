@@ -14,4 +14,9 @@ public class HealthItem extends Item implements IUsable{
     public int getHealing(){
         return healing;
     }
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }

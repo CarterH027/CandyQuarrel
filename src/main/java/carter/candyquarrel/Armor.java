@@ -21,4 +21,9 @@ public class Armor extends Item implements IEquippable{
     public String getName(){
         return name;
     }
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }

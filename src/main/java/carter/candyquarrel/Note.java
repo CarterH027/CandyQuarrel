@@ -8,4 +8,13 @@ public class Note extends Item implements IUsable{
         this.name = name;
         this.message = message;
     }
+
+    public String getMessage(){
+        return message;
+    }
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }
