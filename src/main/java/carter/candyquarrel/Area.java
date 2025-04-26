@@ -32,6 +32,7 @@ public class Area {
     public String toString(){
         return name;
     }
+
     static class AreaBuilder{
         private Item areaItem;
         private boolean itemExists;
