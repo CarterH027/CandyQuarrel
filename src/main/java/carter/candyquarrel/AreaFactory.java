@@ -24,31 +24,49 @@ public class AreaFactory {
                 .setEnemy(new Enemy("Carrot Crusader", new Armor("Gumdrop Shoes", 10, 2), 30, 5)));
 
         // Still need to do the ones below.
-        Area eastWalls = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10), 30, 5))
-                .setItem(new Weapon("Lollipop Sword", 6)));
+        Area eastWalls = new Area(new Area.AreaBuilder("East Castle Walls")
+                .setEnemy(new Enemy("Onion Officer", 50, 6)));
 
-        Area southWalls = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10), 30, 5))
-                .setItem(new Weapon("Lollipop Sword", 6)));
+        Area southWalls = new Area(new Area.AreaBuilder("South Castle Walls")
+                .setEnemy(new Enemy("Beet Barbarian",35, 9))
+        );
 
-        Area northWalls = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10), 30, 5))
-                .setItem(new Weapon("Lollipop Sword", 6)));
+        Area northWalls = new Area(new Area.AreaBuilder("North Castle Walls")
+                .setEnemy(new Enemy("Cauliflower Conjurer",45, 7))
+        );
 
-        Area westWalls = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10), 30, 5))
-                .setItem(new Weapon("Lollipop Sword", 6)));
+        Area westWalls = new Area(new Area.AreaBuilder("West Castle Walls")
+                .setEnemy(new Enemy("Band of Brussels Sprout Bishops", 100, 5))
+        );
+        Area candycastle = new Area(new Area.AreaBuilder("Candy Castle")
+                .setEnemy(new Enemy("Jamal", new Note("The Princess", "The Princess..?"), 125, 8)));
 
-        Area candycastle = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10), 30, 5)));
+
+        lollipopWoods.setConnectedArea(molassesSwamp);
+        lollipopWoods.setConnectedArea(gumdropMountains);
+        lollipopWoods.setConnectedArea(westWalls);
+        molassesSwamp.setConnectedArea(lollipopWoods);
+        molassesSwamp.setConnectedArea(peppermintForest);
+        molassesSwamp.setConnectedArea(northWalls);
+        peppermintForest.setConnectedArea(molassesSwamp);
+        peppermintForest.setConnectedArea(eastWalls);
+        peppermintForest.setConnectedArea(gumdropMountains);
+        gumdropMountains.setConnectedArea(lollipopWoods);
+        gumdropMountains.setConnectedArea(peppermintForest);
+        gumdropMountains.setConnectedArea(southWalls);
+        westWalls.setConnectedArea(lollipopWoods);
+        southWalls.setConnectedArea(gumdropMountains);
+        eastWalls.setConnectedArea(peppermintForest);
+        northWalls.setConnectedArea(molassesSwamp);
+
 
         return areas;
     }
 
-    public ArrayList<Area> loadAreasFromSave(){
-        ArrayList<Area> areas = new ArrayList<>();
-
-        return areas;
-    }
+    //Will be created once data writer and reader are finished
+    //public ArrayList<Area> loadAreasFromSave(){
+    //    ArrayList<Area> areas = new ArrayList<>();
+    //
+    //    return areas;
+    //}
 }
