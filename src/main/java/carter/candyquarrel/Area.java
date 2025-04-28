@@ -18,6 +18,10 @@ public class Area {
         this.enemyExists = builder.enemyExists;
     }
 
+    public Enemy getEnemy(){return enemy;}
+    public Item getAreaItem(){return areaItem;}
+    public boolean isItemExists(){return itemExists;}
+    public boolean isEnemyExists(){return enemyExists;}
     /**
      * To be called when the item in the area is taken, so that it no longer appears
      */
