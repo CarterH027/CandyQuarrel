@@ -19,6 +19,10 @@ public class Enemy {
         this.damage = damage;
     }
 
+    /**
+     * To be called whenever an enemy attacks a player
+     * @param player the only player that will be in the game, param will always be player
+     */
     public void attack(Player player){
         player.setHealth(player.getHealth() + (player.getDefense() - this.damage));
     }

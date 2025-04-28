@@ -6,6 +6,10 @@ public class AreaFactory {
 
     public AreaFactory(){}
 
+    /**
+     * To be called when a new save file is started, it will create all areas and their corresponding elements.
+     * @return returns all areas
+     */
     public ArrayList<Area> makeNewAreas(){
         ArrayList<Area> areas = new ArrayList<>();
         Area lollipopWoods = new Area(new Area.AreaBuilder("Lollipop Woods")

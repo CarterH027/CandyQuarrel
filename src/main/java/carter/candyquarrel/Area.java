@@ -18,14 +18,32 @@ public class Area {
         this.enemyExists = builder.enemyExists;
     }
 
+    /**
+     * To be called when the item in the area is taken, so that it no longer appears
+     */
     public void itemTaken(){
         this.itemExists = false;
     }
+
+    /**
+     * to be used when the area enemy is defeated, so that it no longer appears
+     */
     public void enemyDefeated(){
         this.enemyExists = false;
     }
+
+    /**
+     * sets the areas that are connected to a specific area, so that the game knows
+     * the connected areas
+     * @param area the area to be connected to current area
+     */
     public void setConnectedArea(Area area) {
         connectedAreas.add(area);
+    }
+
+    //A getter for all the connected areas
+    public ArrayList<Area> getConnectedAreas(){
+        return connectedAreas;
     }
 
     @Override
