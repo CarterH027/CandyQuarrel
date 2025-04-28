@@ -11,7 +11,7 @@ class WeaponTest {
 
         Player player = new Player("name");
         Weapon weapon0 = new Weapon("Test Weapon", 10);
-        Enemy enemy = new Enemy("Test Enemy",new Weapon("Test Weapon2",15),20,5);
+        Enemy enemy = new Enemy("Test Enemy",new Weapon("Test Weapon2",15),20,5,0,0);
 
         player.addItem(weapon0);
         player.equip(weapon0);

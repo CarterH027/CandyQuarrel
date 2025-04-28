@@ -5,19 +5,28 @@ public class Enemy {
     private Item rewardItem;
     private int health;
     private int damage;
+    private double x, y;
 
-    public Enemy(String name, Item item, int health, int damage){
+    public Enemy(String name, Item item, int health, int damage, double x, double y){
         this.name = name;
         this.rewardItem = item;
         this.health = health;
         this.damage = damage;
+        this.x = x;
+        this.y = y;
     }
 
-    public Enemy(String name, int health, int damage){
+    public Enemy(String name, int health, int damage, double x, double y){
         this.name = name;
         this.health = health;
         this.damage = damage;
+        this.x = x;
+        this.y = y;
     }
+
+    public double getX() {return x;}
+
+    public double getY(){return y;}
 
     /**
      * To be called whenever an enemy attacks a player

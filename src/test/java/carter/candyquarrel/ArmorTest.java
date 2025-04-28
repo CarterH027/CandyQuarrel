@@ -20,7 +20,7 @@ class ArmorTest {
     public void armorDefenseTest(){
         Armor armor = new Armor("armor", 0, 5);
         Player player = new Player("player");
-        Enemy enemy = new Enemy("enemy", 20, 5);
+        Enemy enemy = new Enemy("enemy", 20, 5,0,0);
         player.equip(armor);
 
         enemy.attack(player);
