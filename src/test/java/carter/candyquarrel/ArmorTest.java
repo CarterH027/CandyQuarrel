@@ -8,7 +8,7 @@ class ArmorTest {
 
     @Test
     public void armorHealthTest(){
-        Armor armor = new Armor("armor", 10, 0);
+        Armor armor = new Armor("armor", 10, 0, 0 , 0);
         Player player = new Player("player");
 
         player.equip(armor);
@@ -18,7 +18,7 @@ class ArmorTest {
 
     @Test
     public void armorDefenseTest(){
-        Armor armor = new Armor("armor", 0, 5);
+        Armor armor = new Armor("armor", 0, 5, 0 , 0);
         Player player = new Player("player");
         Enemy enemy = new Enemy("enemy", 20, 5,0,0);
         player.equip(armor);

@@ -3,6 +3,8 @@ package carter.candyquarrel;
 /**
  * A classifier class for all items in the game
  */
-public class Item {
+public abstract class Item {
 
+    public abstract double getX();
+    public abstract double getY();
 }

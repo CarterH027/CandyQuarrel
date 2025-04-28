@@ -14,7 +14,7 @@ public class Player {
     /** Create the player and give them an item 'fists' to start
      *
      */
-    Weapon fists = new Weapon("Fists", 1);
+    Weapon fists = new Weapon("Fists", 1, 0 , 0);
 
     public Player(String name){
         this.maxHealth = 30;
