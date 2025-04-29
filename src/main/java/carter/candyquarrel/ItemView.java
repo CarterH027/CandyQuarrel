@@ -11,31 +11,30 @@ public class ItemView {
 
     public ItemView(Item item){
         this.item = item;
+        Rectangle rectangle = new Rectangle(20,20, Color.BROWN);
+        rectangle.setTranslateX(item.getX());
+        rectangle.setTranslateY(item.getY());
+        rectangle.setStroke(Color.BLACK);
+
         if(item instanceof Weapon){
-            Rectangle rectangle = new Rectangle(20,20, Color.BROWN);
-            rectangle.setTranslateX(item.getX());
-            rectangle.setTranslateY(item.getY());
-            this.node = rectangle;
+            rectangle.setFill(Color.DARKGREY);
         } else if (item instanceof Armor){
-            Rectangle rectangle = new Rectangle(20,20, Color.BLUE);
-            rectangle.setTranslateX(item.getX());
-            rectangle.setTranslateY(item.getY());
-            this.node = rectangle;
+            rectangle.setFill(Color.BLUE);
         } else if (item instanceof HealthItem) {
-            Rectangle rectangle = new Rectangle(20,20, Color.PINK);
-            rectangle.setTranslateX(item.getX());
-            rectangle.setTranslateY(item.getY());
-            this.node = rectangle;
+            rectangle.setFill(Color.LIGHTPINK);
         } else if (item instanceof Note){
-            Rectangle rectangle = new Rectangle(20,20, Color.LIGHTYELLOW);
-            rectangle.setTranslateX(item.getX());
-            rectangle.setTranslateY(item.getY());
-            this.node = rectangle;
+            rectangle.setFill(Color.LIGHTYELLOW);
         } else {
-            this.node = null;
+            rectangle.setFill(Color.GREY);
         }
+
+        this.node = rectangle;
     }
      public Node getNode() {
         return node;
+     }
+
+     public Item getItem(){
+        return item;
      }
 }

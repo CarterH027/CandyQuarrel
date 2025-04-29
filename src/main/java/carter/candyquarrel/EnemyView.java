@@ -13,10 +13,13 @@ public class EnemyView {
         Circle circle = new Circle(20, Color.DARKRED);
         circle.setTranslateX(enemy.getX());
         circle.setTranslateY(enemy.getY());
+        circle.setStroke(Color.BLACK);
         this.node = circle;
     }
 
     public Node getNode() {
         return node;
     }
+
+    public Enemy getEnemy(){return enemy;}
 }

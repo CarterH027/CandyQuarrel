@@ -16,6 +16,7 @@ public class Area {
         this.itemExists = builder.itemExists;
         this.enemy = builder.enemy;
         this.enemyExists = builder.enemyExists;
+        this.connectedAreas = new ArrayList<>();
     }
 
     public Enemy getEnemy(){return enemy;}

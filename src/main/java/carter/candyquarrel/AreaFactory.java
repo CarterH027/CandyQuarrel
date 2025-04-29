@@ -13,8 +13,8 @@ public class AreaFactory {
     public ArrayList<Area> makeNewAreas(){
         ArrayList<Area> areas = new ArrayList<>();
         Area lollipopWoods = new Area(new Area.AreaBuilder("Lollipop Woods")
-                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10, 0 , 0), 30, 5, 500, 500))
-                .setItem(new Weapon("Lollipop Sword", 6, 200,200)));
+                .setEnemy(new Enemy("Broccoli Brute", new HealthItem("Bottle of Cola", 10, 0 , 0), 30, 5, 500, 300))
+                .setItem(new Weapon("Lollipop Sword", 6, 350,270)));
 
         Area peppermintForest = new Area(new Area.AreaBuilder("Peppermint Forest")
                 .setEnemy(new Enemy("Corn Child", new Note("Chocolate Key", "Key used to unlock the doors to the castle.\nYou're a monster, but it was necessary", 0 , 0), 100, 0, 500, 500))
@@ -42,7 +42,7 @@ public class AreaFactory {
         Area westWalls = new Area(new Area.AreaBuilder("West Castle Walls")
                 .setEnemy(new Enemy("Band of Brussels Sprout Bishops", 100, 5, 950, 500))
         );
-        Area candycastle = new Area(new Area.AreaBuilder("Candy Castle")
+        Area candyCastle = new Area(new Area.AreaBuilder("Candy Castle")
                 .setEnemy(new Enemy("Jamal", new Note("The Princess", "The Princess..?",0,0), 125, 8,1000,1000)));
 
 
@@ -63,6 +63,15 @@ public class AreaFactory {
         eastWalls.setConnectedArea(peppermintForest);
         northWalls.setConnectedArea(molassesSwamp);
 
+        areas.add(lollipopWoods);
+        areas.add(molassesSwamp);
+        areas.add(gumdropMountains);
+        areas.add(peppermintForest);
+        areas.add(westWalls);
+        areas.add(northWalls);
+        areas.add(eastWalls);
+        areas.add(southWalls);
+        areas.add(candyCastle);
 
         return areas;
     }
