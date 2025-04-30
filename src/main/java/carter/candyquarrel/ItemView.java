@@ -9,6 +9,10 @@ public class ItemView {
     private Item item;
     private Node node;
 
+    /**
+     * Creates a graphical representation of items, and gives them a color based on type
+     * @param item - the item that will be realized
+     */
     public ItemView(Item item){
         this.item = item;
         Rectangle rectangle = new Rectangle(20,20, Color.BROWN);

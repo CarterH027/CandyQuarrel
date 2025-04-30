@@ -27,8 +27,16 @@ public class MovementHandler {
     private double startX, startY;
 
 
-
-
+    /**
+     *
+     * @param scene the current scene that the player is in, when constructing, it should be within an AreaView
+     *              (i.e. Lollipop Woods) and 'this' should be passed in.
+     * @param playerNode should be obtained from playerView.getNode
+     * @param speed the speed at which the player character will move
+     * @param collidables a list of objects that the player can collide with in the area
+     * @param x starting x position of the player
+     * @param y starting y position of the player
+     */
     public MovementHandler(Scene scene, Circle playerNode, double speed, List<Node> collidables, double x, double y) {
         this.playerNode = playerNode;
         this.speed = speed;
@@ -92,7 +100,12 @@ public class MovementHandler {
         }
     }
 
+    //TODO: this will eventually have something to do with the player interacting with objects as well but for now...
 
+    /**
+     * Checks to see if the player dimensions collide with another node's dimensions
+     * @return the node contacted
+     */
     private Node getcollidingNode() {
         for (Node node : collidables) {
             if (playerNode.getBoundsInParent().intersects(node.getBoundsInParent())) {
